@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dear Anthea</title>
+    <link rel="stylesheet" href anthea.css>
+</head>
+<body>
+
+<script src="anthea.js">
+
+document.getElementById("changeUrlBtn").addEventListener("click", function () {
+            // New URL path (relative to current domain)
+            const newPath = "/new-page";
+
+            // Change URL without reloading
+            history.pushState({}, "", newPath);
+
+            // Optional: Update page content dynamically
+            document.body.insertAdjacentHTML("beforeend", `<p>URL changed to: ${window.location.pathname}</p>`);
+        });
+</script>
+</body>
+</html>

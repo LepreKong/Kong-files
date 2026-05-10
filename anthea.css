@@ -1,0 +1,80 @@
+/* Page background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffd6e7, #ffeef5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+}
+
+/* Welcome title */
+h1 {
+    color: #ff4f8b;
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+
+/* Envelope button */
+.envelope-btn {
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #ff80ab;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.envelope-btn:hover {
+    background-color: #ff4f8b;
+    transform: scale(1.05);
+}
+
+/* Letter popup */
+.letter {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 420px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    animation: popup 0.4s ease;
+}
+
+/* Letter text */
+.letter h2 {
+    color: #ff4f8b;
+}
+
+.letter p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Popup animation */
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
